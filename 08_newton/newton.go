@@ -6,9 +6,8 @@ import (
 )
 
 func Sqrt(x float64) float64 {
-	for i, z, old := 1, x / 2, 0.0; ; i++ {
-		fmt.Println(old,z)
-        if old, z = z, z - (z * z - x) / 2 / z; math.Abs(old - z) < 1e-6 {
+	for i, z, prevZ := 1, x / 2, 0.0; ; i++ {
+        if prevZ, z = z, z - (z * z - x) / 2 / z; math.Abs(prevZ - z) < 1e-5 { // 1e-5 = 0,00001
             fmt.Printf("Ran %v iterations\n", i)
             return z
         }
