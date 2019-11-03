@@ -39,7 +39,7 @@ func main() {
 	x, y := 3, 4
 	var a float64 = math.Sqrt(float64(x*x + y*y))
 	var z uint = uint(a)
-	fmt.Println(x,y,z)
+	fmt.Println(x,y,a,z)
 
 	v := 42.01999389 + 5i
 	fmt.Printf("v is of type %T\n",v)
