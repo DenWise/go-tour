@@ -10,7 +10,7 @@ type Person struct {
 }
 
 func (p Person) String() string {
-    return fmt.Sprintf("%v (%v years)",p.Name,p.Age) // struct of type to string
+    return fmt.Sprintf("%v (%v years)",p.Name,p.Age) // struct of type Person to string
 }
 
 type IPAddr [4]byte
