@@ -4,13 +4,13 @@ import (
     "golang.org/x/tour/pic"
 )
 
-func Pic(dx, dy int) [][]uint8 {
-    slice := make([][]uint8, dy)
+func Pic(dx, dy int) [][]byte {
+    slice := make([][]byte, dy)
 
     for i := range slice {
-        slice[i] = make([]uint8,dx)
+        slice[i] = make([]byte,dx)
         for j := 0; j < dx; j++ {
-            slice[i][j] = uint8(i * j)
+            slice[i][j] = byte(i * j)
         }
     }
 
