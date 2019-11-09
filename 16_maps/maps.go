@@ -42,19 +42,10 @@ func main() {
     fmt.Println(s)
 
     key := "Google"
-    fmt.Println(getMapVertexElem(key,s))
 
     delete(s,key)
     l,ok := s[key]
     fmt.Printf("Location %v is present? %v\n",l,ok)
 
     wc.Test(WordCount)
-}
-
-func getMapVertexElem(key string, s map[string]Vertex) Vertex {
-    if elem, ok := s[key]; ok {
-        return elem
-    } else {
-        return Vertex{}
-    }
 }
